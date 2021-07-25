@@ -22,6 +22,7 @@ public class User {
     private String telephone;
     private Boolean inTrash;
     private Boolean exclude;
+    private Boolean logged;
 
     @Version
     private Integer version;

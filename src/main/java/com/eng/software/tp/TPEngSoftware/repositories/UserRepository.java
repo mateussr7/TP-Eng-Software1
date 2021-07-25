@@ -12,4 +12,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     List<User> findAllByInTrashAndExclude(Boolean inTrash, Boolean exclude);
 
+    List<User> findAllByInTrashAndExcludeAndLoggedTrue(Boolean inTrash, Boolean exclude);
+
+    Optional<User> findByNameAndEmail(String name, String email);
+
 }

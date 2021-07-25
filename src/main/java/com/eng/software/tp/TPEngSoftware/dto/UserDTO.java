@@ -3,6 +3,7 @@ package com.eng.software.tp.TPEngSoftware.dto;
 import com.eng.software.tp.TPEngSoftware.domain.User;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.modelmapper.ModelMapper;
 
 @Data
 @NoArgsConstructor
@@ -18,6 +19,7 @@ public class UserDTO {
     private Boolean inTrash;
     private Boolean exclude;
     private Integer version;
+    private Boolean logged;
 
     public UserDTO(User user){
         this.id = user.getId();
@@ -29,5 +31,11 @@ public class UserDTO {
         this.inTrash = user.getInTrash();
         this.exclude = user.getExclude();
         this.version = user.getVersion();
+        this.logged = user.getLogged();
+    }
+
+    public User toEntity(){
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.createTypeMap(this, User.class).map(this);
     }
 }
