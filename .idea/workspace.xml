@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02343791-235f-4421-90e4-f067e3a8ddf8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765be9eabd3499e7923f38da15e5de772c0f65f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c65f961dd7ad26262366d9965f07e114511884a2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/cac3e91ed59e0b34fab8e7525a8a1cf8faf622d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/6/e65664acd079c27ea30c2ef1b6f0e7bd68f34dca" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/EmployeeDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/ProductDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/SaleDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/enums/EnumProductType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/enums/EnumUserPermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/SaleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb16791fa2a41b7a1644adcd5955adfce6853a82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb16791fa2a41b7a1644adcd5955adfce6853a82" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/api/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/api/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/UserDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/UserRepository.java" afterDir="false" />
@@ -24,6 +33,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
       </list>
@@ -46,7 +56,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunManager">
     <configuration name="TpEngSoftwareApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -69,7 +82,18 @@
       <workItem from="1626235111435" duration="1076000" />
       <workItem from="1626313476942" duration="4038000" />
       <workItem from="1626392426086" duration="862000" />
-      <workItem from="1627176520585" duration="2141000" />
+      <workItem from="1627176520585" duration="2188000" />
+      <workItem from="1627319616899" duration="862000" />
+      <workItem from="1627866299770" duration="136000" />
+      <workItem from="1627866820496" duration="58000" />
+      <workItem from="1627939319349" duration="256000" />
+      <workItem from="1628468039464" duration="3838000" />
+      <workItem from="1628619981034" duration="772000" />
+      <workItem from="1628694775800" duration="2242000" />
+      <workItem from="1628707522321" duration="35000" />
+      <workItem from="1628710715321" duration="5944000" />
+      <workItem from="1628883048945" duration="1943000" />
+      <workItem from="1629402050572" duration="5221000" />
     </task>
     <servers />
   </component>

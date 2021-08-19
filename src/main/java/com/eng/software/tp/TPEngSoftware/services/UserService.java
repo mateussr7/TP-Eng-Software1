@@ -55,4 +55,9 @@ public class UserService {
         return new UserDTO(userRepository.save(user));
     }
 
+    public List<UserDTO> getUsersList(){
+        List<User> users = userRepository.findAllByLoggedFalseAndInTrashAndExclude(false, false);
+        return UserDTO.createDTOList(users);
+    }
+
 }
