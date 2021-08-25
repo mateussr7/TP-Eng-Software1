@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+CAUTION: Do not modify this file unless you know what you are doing.
+         Unexpected results may occur if the code is changed deliberately.
+-->
+<dbmodel pgmodeler-ver="0.9.3" use-changelog="false" last-position="0,0" last-zoom="1" max-obj-count="6"
+	 default-schema="public" default-owner="postgres">
+<database name="new_database" is-template="false" allow-conns="true">
+</database>
+
+<schema name="public" layer="0" fill-color="#e1e1e1" sql-disabled="true">
+</schema>
+
+<table name="usersystem" layer="0" collapse-mode="2" max-obj-count="10" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="720" y="60"/>
+	<column name="id" not-null="true" sequence="public.usersystem_seq">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="name" not-null="true">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="email">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="password">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="telephone">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="isAdmin">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="exclude">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="logged">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="version">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="usersystem_pk" type="pk-constr" table="public.usersystem">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="usersystem_seq" cycle="false" start="1" increment="1" min-value="0" max-value="2147483647" cache="1">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<sequence name="product_seq" cycle="false" start="1" increment="1" min-value="0" max-value="2147483647" cache="1">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="product" layer="0" collapse-mode="2" max-obj-count="12" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="180" y="400"/>
+	<column name="id" not-null="true" sequence="public.product_seq">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="description">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="brand">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="amount">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="price">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="product_type">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="version">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="product_pk" type="pk-constr" table="public.product">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_cart" index="8"/>
+		<object name="id_sale" index="7"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="cart_fk" index="2"/>
+		<object name="sale_fk" index="1"/>
+	</customidxs>
+</table>
+
+<table name="sale" layer="0" collapse-mode="2" max-obj-count="2" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="340" y="80"/>
+	<column name="id" not-null="true" sequence="public.sale_seq">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="sale_pk" type="pk-constr" table="public.sale">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+
+	<customidxs object-type="column">
+		<object name="id_usersystem" index="1"/>
+	</customidxs>
+
+	<customidxs object-type="constraint">
+		<object name="usersystem_fk" index="1"/>
+	</customidxs>
+</table>
+
+<sequence name="sale_seq" cycle="false" start="1" increment="1" min-value="0" max-value="2147483647" cache="1">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<relationship name="sale_has_many_product" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#2454e7"
+	 src-table="public.sale"
+	 dst-table="public.product"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="usersystem_has_many_sale" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#5ddaff"
+	 src-table="public.usersystem"
+	 dst-table="public.sale"
+	 src-required="false" dst-required="false"/>
+
+<table name="employee" layer="0" collapse-mode="2" max-obj-count="8" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="1060" y="340"/>
+	<column name="id" not-null="true" sequence="public.employee_seq">
+		<type name="integer" length="0"/>
+	</column>
+	<column name="name">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="telephone">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="email">
+		<type name="character varying" length="0"/>
+	</column>
+	<column name="salary">
+		<type name="double precision" length="0"/>
+	</column>
+	<column name="exclude">
+		<type name="boolean" length="0"/>
+	</column>
+	<column name="version">
+		<type name="smallint" length="0"/>
+	</column>
+	<constraint name="employee_pk" type="pk-constr" table="public.employee">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="employee_seq" cycle="false" start="1" increment="1" min-value="0" max-value="2147483647" cache="1">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<table name="cart" layer="0" collapse-mode="2" max-obj-count="3" z-value="0">
+	<schema name="public"/>
+	<role name="postgres"/>
+	<position x="620" y="440"/>
+	<column name="id" not-null="true" sequence="public.cart_seq">
+		<type name="integer" length="0"/>
+	</column>
+	<constraint name="cart_pk" type="pk-constr" table="public.cart">
+		<columns names="id" ref-type="src-columns"/>
+	</constraint>
+</table>
+
+<sequence name="cart_seq" cycle="false" start="1" increment="1" min-value="0" max-value="2147483647" cache="1">
+	<schema name="public"/>
+	<role name="postgres"/>
+</sequence>
+
+<relationship name="cart_has_one_usersystem" type="rel11" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#3ebae1"
+	 src-table="public.usersystem"
+	 dst-table="public.cart"
+	 src-required="false" dst-required="false"/>
+
+<relationship name="cart_has_many_product" type="rel1n" layer="0"
+	 src-col-pattern="{sc}_{st}"
+	 pk-pattern="{dt}_pk" uq-pattern="{dt}_uq"
+	 src-fk-pattern="{st}_fk"
+	 custom-color="#023158"
+	 src-table="public.cart"
+	 dst-table="public.product"
+	 src-required="false" dst-required="false"/>
+
+</dbmodel>

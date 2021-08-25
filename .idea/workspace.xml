@@ -5,25 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02343791-235f-4421-90e4-f067e3a8ddf8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/EmployeeDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/ProductDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/SaleDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/enums/EnumProductType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/enums/EnumUserPermission.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/EmployeeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/ProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/SaleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb16791fa2a41b7a1644adcd5955adfce6853a82" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/b/fb16791fa2a41b7a1644adcd5955adfce6853a82" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/api/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/api/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +79,12 @@
       <workItem from="1628707522321" duration="35000" />
       <workItem from="1628710715321" duration="5944000" />
       <workItem from="1628883048945" duration="1943000" />
-      <workItem from="1629402050572" duration="5221000" />
+      <workItem from="1629402050572" duration="5871000" />
+      <workItem from="1629492141178" duration="137000" />
+      <workItem from="1629574099485" duration="708000" />
+      <workItem from="1629670720148" duration="984000" />
+      <workItem from="1629837778112" duration="1481000" />
+      <workItem from="1629855365517" duration="263000" />
     </task>
     <servers />
   </component>
