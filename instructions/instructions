@@ -5,3 +5,4 @@ Execute o projeto como projeto spring.
 após isso, basta rodar o comando "yarn start" dentro da pasta "uai-bay" do diretório frontend dentro do projeto no github.
 o modelo de dados está na pasta instructions, com a ferramenta pgmodeler, é possível dar diff e criar o banco de dados referente as tabelas do modelo.
 
+um arquivo de backup do banco de dados usado na aplicação está disponibilizado por 7 dias no link (https://easyupload.io/kygtto) usando a senha '12345'
