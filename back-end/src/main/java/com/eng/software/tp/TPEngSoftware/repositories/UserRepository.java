@@ -8,14 +8,14 @@ import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    Optional<User> findByIdAndInTrashAndExclude(Long id, Boolean inTrash, Boolean exclude);
+    Optional<User> findByIdAndExclude(Long id, Boolean exclude);
 
-    List<User> findAllByInTrashAndExclude(Boolean inTrash, Boolean exclude);
+    List<User> findAllByExclude(Boolean exclude);
 
-    List<User> findAllByInTrashAndExcludeAndLoggedTrue(Boolean inTrash, Boolean exclude);
+    List<User> findAllByExcludeAndLoggedTrue(Boolean exclude);
 
-    Optional<User> findByNameAndEmail(String name, String email);
+    Optional<User> findByEmailAndExcludeFalse(String email);
 
-    List<User> findAllByLoggedFalseAndInTrashAndExclude(Boolean inTrash, Boolean exclude);
+    List<User> findAllByLoggedFalseAndExclude(Boolean exclude);
 
 }

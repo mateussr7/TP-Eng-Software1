@@ -5,7 +5,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "usersystem")
 @Data
 public class User {
 
@@ -19,6 +19,8 @@ public class User {
     private String telephone;
     private Boolean exclude;
     private Boolean logged;
+
+    @Column(name="is_admin")
     private Boolean isAdmin;
 
     @Version

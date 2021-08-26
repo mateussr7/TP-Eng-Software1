@@ -1,31 +1,39 @@
 import React, { FC, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useStyles } from "./styles";
-import { getProducts, getProductInView } from "../../store/Products/selectors";
+import { getProducts } from "../../store/Products/selectors";
 import { Fade, Paper } from "@material-ui/core";
 import { ProductList } from "./List";
 import { AddProduct } from "./Add";
 import { getLoggedUser } from "../../store/User/selectors";
 import { User } from "../../store/User/types";
+import { Product as ProductEntity } from "../../store/Products/types";
 
 export const Product: FC = () => {
   const dispatch = useDispatch();
   const classes = useStyles();
   const products = useSelector(getProducts);
-  const productInView = useSelector(getProductInView);
   const [viewMode, setViewMode] = useState<boolean>(false);
   const [listMode, setListMode] = useState<boolean>(true);
   const [addMode, setAddMode] = useState<boolean>(false);
-  const user = useSelector(getLoggedUser)
+  const user = useSelector(getLoggedUser);
 
   function handleAddMode() {
     setAddMode(!addMode);
     setListMode(!listMode);
   }
 
-  function handleViewMode() {
-    setViewMode(!viewMode);
-    setListMode(!listMode);
+  function addNewProduct(product: ProductEntity): void {}
+
+  function cancellAdd() {
+    setListMode(true)
+    setAddMode(false)
+  }
+
+  function handleProductinView(product: ProductEntity) {
+    setViewMode(true);
+    setListMode(false);
+    setAddMode(false);
   }
 
   return (
@@ -46,11 +54,13 @@ export const Product: FC = () => {
           <ProductList
             products={products}
             setAddMode={handleAddMode}
-            setViewMode={handleViewMode}
+            setViewMode={handleProductinView}
             user={user as User}
           />
         )}
-        {addMode && <AddProduct />}
+        {addMode && (
+          <AddProduct addProduct={addNewProduct} cancellAdd={cancellAdd} />
+        )}
       </Paper>
     </Fade>
   );

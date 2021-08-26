@@ -1,5 +1,4 @@
 import { Reducer } from 'redux'
-import { action } from 'typesafe-actions'
 import { Employee, EmployeeActions, EmployeeState } from './types'
 
 

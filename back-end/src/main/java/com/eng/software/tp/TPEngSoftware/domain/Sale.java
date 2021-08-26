@@ -17,7 +17,7 @@ public class Sale {
     private User customer;
 
     @OneToMany
-    private List<Product> products;
+    private List<SaledProduct> saledProducts;
 
 
 }

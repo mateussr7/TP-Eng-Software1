@@ -6,12 +6,14 @@ import { UserState } from './User/types'
 import { ProductState } from './Products/types'
 import { EmployeeState } from './Employee/types'
 import { SalesState } from './Sales/types'
+import { CartState } from './Cart/types'
 
 export interface ApplicationState {
     userReducer: UserState,
     productReducer: ProductState,
     employeeReducer: EmployeeState,
-    saleReducer: SalesState
+    saleReducer: SalesState,
+    cartReducer: CartState,
 }
 
 const sagaMiddleware = createSagaMiddleware()

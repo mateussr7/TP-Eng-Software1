@@ -17,9 +17,9 @@ public class ProductDTO {
 
     private String name;
     private String description;
-    private Double value;
+    private Double price;
     private String brand;
-    private EnumProductType productType;
+    private String productType;
     private Integer amount;
     private Boolean exclude;
 
@@ -27,7 +27,7 @@ public class ProductDTO {
         this.id = product.getId();
         this.name = product.getName();
         this.description = product.getDescription();
-        this.value = product.getValue();
+        this.price = product.getPrice();
         this.brand = product.getBrand();
         this.productType = product.getProductType();
         this.amount = product.getAmount();

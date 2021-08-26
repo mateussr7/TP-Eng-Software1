@@ -1,6 +1,7 @@
 import { call, put, takeLatest } from "@redux-saga/core/effects"
 import { AnyAction } from "redux"
 import { addSaleService, deleteSaleService, fetchSalesFromCustomerService, updateSaleService } from "../../services/saleService"
+import { Product } from "../Products/types"
 import { addSaleSuccess, deleteSaleSuccess, fetchSalesFRomCustomerSuccess, updateSaleSuccess } from "./actions"
 import { Sale, SalesActions } from "./types"
 
@@ -23,7 +24,8 @@ export function* fetchSaleFromCustomerSagas(action: AnyAction){
 export function* addSaleSagas(action: AnyAction){
     try{
         const sale: Sale = action.payload.sale
-        const returnedSale: Sale = yield call(() => addSaleService(sale))
+        const products: Product[] = action.payload.products
+        const returnedSale: Sale = yield call(() => addSaleService(sale, products))
         yield put(addSaleSuccess(returnedSale))
     }catch(err){}
 }

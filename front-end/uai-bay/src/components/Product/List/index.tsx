@@ -15,6 +15,11 @@ import LocalMallIcon from "@material-ui/icons/LocalMall";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import AddIcon from "@material-ui/icons/Add";
 import { User } from "../../../store/User/types";
+import { useDispatch } from "react-redux";
+import { addItem, addItemSagas } from "../../../store/Cart/actions";
+import { fetchProductsSagas } from "../../../store/Products/sagas";
+import { fetchProducts } from "../../../store/Products/actions";
+import { useHistory } from "react-router-dom";
 
 interface ProductListProps {
   products: Product[];
@@ -31,10 +36,21 @@ export const ProductList: FC<ProductListProps> = ({
 }: ProductListProps) => {
   const classes = useStyles();
   const [listedProducts, setListedProducts] = useState<Product[]>([]);
+  const history = useHistory()
+  const dispatch = useDispatch()
+
+
+  useEffect(() => {
+    dispatch(fetchProducts())
+  }, [dispatch])
 
   useEffect(() => {
     setListedProducts(products);
   }, [products]);
+
+  function handleCartButtonClick(product: Product){
+    dispatch(addItemSagas(product))
+  }
 
   return (
     <Grid item style={{ width: "100%" }}>
@@ -53,7 +69,7 @@ export const ProductList: FC<ProductListProps> = ({
               </div>
             </div>
             <div className={classes.buttonDiv}>
-              <IconButton style={{ justifyContent: "center" }}>
+              <IconButton style={{ justifyContent: "center" }} onClick={() => handleCartButtonClick(product)}>
                 <AddShoppingCartIcon />
               </IconButton>
             </div>

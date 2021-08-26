@@ -1,8 +1,7 @@
-import { Container, Fade, Grid, Paper } from "@material-ui/core";
+import { Container, Fade, Paper } from "@material-ui/core";
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 import {
-  getLoggedUser,
   getLogged,
   getUserList,
 } from "../../store/User/selectors";
@@ -12,19 +11,19 @@ import UserList from "./List";
 import { useStyles } from "./styles";
 
 const UserComponent: FC = () => {
-  const [viewMode, setViewMode] = useState<boolean>(false);
-  const [listMode, setListMode] = useState<boolean>(true);
-  const [updateMode, setUpdateMode] = useState<boolean>(false);
+  //const [viewMode, setViewMode] = useState<boolean>(false);
+  const [listMode, ] = useState<boolean>(true);
+  //const [updateMode, setUpdateMode] = useState<boolean>(false);
   const logged: boolean = useSelector(getLogged);
-  const user: User | null = useSelector(getLoggedUser);
+  //const user: User | null = useSelector(getLoggedUser);
   const users: User[] = useSelector(getUserList);
   const classes = useStyles();
 
-  function handleListModeChange() {
-    setListMode(!listMode);
-  }
+  //function handleListModeChange() {
+  //  setListMode(!listMode);
+  //}
 
-  function handleUpdateModeChange() {}
+  //function handleUpdateModeChange() {}
 
   return (
     <Fade
@@ -32,7 +31,6 @@ const UserComponent: FC = () => {
         overflow: "hidden",
         borderTop: "8px solid #3F51B5",
         borderRadius: "3px",
-        marginLeft: "20px",
       }}
       timeout={500}
       in={true}

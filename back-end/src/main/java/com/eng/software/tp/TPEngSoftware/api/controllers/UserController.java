@@ -20,7 +20,7 @@ public class UserController {
         return ResponseEntity.ok(userService.login(userDTO));
     }
 
-    @GetMapping("/list")
+    @PostMapping("/list")
     public ResponseEntity<List<UserDTO>> getAllUsers(){
         List<UserDTO> dtoList = userService.getUsersList();
         return dtoList.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(dtoList);

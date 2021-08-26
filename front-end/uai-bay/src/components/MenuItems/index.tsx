@@ -5,18 +5,15 @@ import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { Link } from "react-router-dom";
 import { ListItem, ListItemIcon, ListItemText } from "@material-ui/core";
-import { getLoggedUser } from "../../store/User/selectors";
-import { User } from "../../store/User/types";
-import { useSelector } from "react-redux";
 
 interface ItemListProps {
   logged: boolean;
 }
 
-export const ItemsList: FC<ItemListProps> = (props) => {
+export const ItemsList: FC<ItemListProps> = ({ logged }: ItemListProps) => {
   return (
     <div>
-      {props.logged && (
+      {logged && (
         <Link
           style={{ textDecoration: "none", color: "inherit" }}
           to="/products"
@@ -29,7 +26,7 @@ export const ItemsList: FC<ItemListProps> = (props) => {
           </ListItem>
         </Link>
       )}
-      {props.logged && (
+      {logged && (
         <Link
           style={{ textDecoration: "none", color: "inherit" }}
           to="/customers"
@@ -42,7 +39,7 @@ export const ItemsList: FC<ItemListProps> = (props) => {
           </ListItem>
         </Link>
       )}
-      {props.logged && (
+      {logged && (
         <Link
           style={{ textDecoration: "none", color: "inherit" }}
           to="/employees"
@@ -52,16 +49,6 @@ export const ItemsList: FC<ItemListProps> = (props) => {
               <AssignmentIndIcon />
             </ListItemIcon>
             <ListItemText primary="Employees" />
-          </ListItem>
-        </Link>
-      )}
-      {props.logged && (
-        <Link style={{ textDecoration: "none", color: "inherit" }} to="/sales">
-          <ListItem>
-            <ListItemIcon>
-              <AttachMoneyIcon />
-            </ListItemIcon>
-            <ListItemText primary="Sales" />
           </ListItem>
         </Link>
       )}

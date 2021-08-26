@@ -21,9 +21,6 @@ public class Product {
     private Integer amount;
     private Boolean exclude;
 
-    @ManyToOne
-    private Sale sale;
-
     @Version
     private Integer version;
 

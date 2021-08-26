@@ -19,11 +19,10 @@ public class UserDTO {
     private String email;
     private String password;
     private String telephone;
-    private Boolean inTrash;
     private Boolean exclude;
     private Integer version;
     private Boolean logged;
-    private EnumUserPermission permission;
+    private Boolean isAdmin;
 
     public UserDTO(User user){
         this.id = user.getId();
@@ -31,11 +30,10 @@ public class UserDTO {
         this.email = user.getEmail();
         this.password = user.getPassword();
         this.telephone = user.getTelephone();
-        this.inTrash = user.getInTrash();
         this.exclude = user.getExclude();
         this.version = user.getVersion();
         this.logged = user.getLogged();
-        this.permission = user.getPermission();
+        this.isAdmin = user.getIsAdmin();
     }
 
     public User toEntity(){

@@ -1,4 +1,5 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, createTheme } from "@material-ui/core/styles";
+import indigo from '@material-ui/core/colors/indigo'
 
 const drawerWidth = 240;
 
@@ -73,5 +74,13 @@ const useStyles = makeStyles((theme) => ({
   },
 
 }));
+
+export const theme = createTheme({
+  palette: {
+    secondary: {
+      main: indigo[50]
+    }
+  }
+})
 
 export default useStyles;

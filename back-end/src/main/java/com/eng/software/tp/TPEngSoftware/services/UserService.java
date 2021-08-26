@@ -16,13 +16,13 @@ public class UserService {
     private UserRepository userRepository;
 
     public UserDTO getUserById(Long id){
-        User user = userRepository.findByIdAndInTrashAndExclude(id, false, false).orElseThrow(() ->
+        User user = userRepository.findByIdAndExclude(id, false).orElseThrow(() ->
                 new NoSuchElementException("User not found"));
         return new UserDTO(user);
     }
 
     public UserDTO login(UserDTO userDTO){
-        List<User> loggedUsers = userRepository.findAllByInTrashAndExcludeAndLoggedTrue(false, false);
+        List<User> loggedUsers = userRepository.findAllByExcludeAndLoggedTrue(false);
 
         for(User user : loggedUsers){
             user.setLogged(false);
@@ -31,7 +31,7 @@ public class UserService {
         userRepository.saveAll(loggedUsers);
         userRepository.flush();
 
-        User user = userRepository.findByNameAndEmail(userDTO.getName(), userDTO.getEmail()).orElseThrow(() ->
+        User user = userRepository.findByEmailAndExcludeFalse(userDTO.getEmail()).orElseThrow(() ->
                 new NoSuchElementException("User not found"));
 
         user.setLogged(true);
@@ -39,7 +39,7 @@ public class UserService {
     }
 
     public UserDTO logout(UserDTO userDTO){
-        User user = userRepository.findByNameAndEmail(userDTO.getName(), userDTO.getEmail()).orElseThrow(() ->
+        User user = userRepository.findByEmailAndExcludeFalse(userDTO.getEmail()).orElseThrow(() ->
                 new NoSuchElementException("User not found"));
 
         user.setLogged(false);
@@ -56,8 +56,17 @@ public class UserService {
     }
 
     public List<UserDTO> getUsersList(){
-        List<User> users = userRepository.findAllByLoggedFalseAndInTrashAndExclude(false, false);
+        List<User> users = userRepository.findAllByLoggedFalseAndExclude(false);
         return UserDTO.createDTOList(users);
+    }
+
+    public UserDTO deleteUser(Long idUser){
+        User user = userRepository.findByIdAndExclude(idUser, false).orElseThrow(() ->
+                new NoSuchElementException("User not found"));
+
+        user.setExclude(true);
+        user.setLogged(false);
+        return new UserDTO(userRepository.save(user));
     }
 
 }

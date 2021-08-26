@@ -1,19 +1,29 @@
 import axios from 'axios'
 import { User, UserDTO } from '../store/User/types'
-import { env } from '../env/env'
 import { getWebServiceURL } from './utils/getURL'
 
 
-export async function loginService(userDTO: UserDTO): Promise<User> {
+export async function loginService(user: User): Promise<User> {
     const URL = getWebServiceURL('/user/login')
-    const response: User = await axios.post(URL, userDTO)
+    console.log(user)
+    const response = await axios.post(URL, user)
 
-    return response
+    return response.data as User
 }
 
 export async function fetchUsersList(): Promise<User[]> {
     const URL = getWebServiceURL('/user/list')
-    const response: User[] = await axios.get(URL)
+    const response = await axios.post(URL)
 
-    return response
+    return response.data.map((el: User) => ({
+        ...el,
+        id: el.id,
+        name: el.name,
+        email: el.email,
+        password: el.password,
+        telephone: el.telephone,
+        isAdmin: el.isAdmin,
+        exclude: el.exclude,
+        logged: el.logged
+    }))
 }

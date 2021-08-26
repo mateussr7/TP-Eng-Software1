@@ -3,7 +3,8 @@ import { userSagas } from "./User/sagas";
 import { productSagas } from "./Products/sagas";
 import { employeeSagas } from "./Employee/sagas";
 import { saleSagas } from "./Sales/sagas";
+import { cartSagas } from "./Cart/sagas";
 
 export default function* rootSaga() {
-  yield all([userSagas(), productSagas(), employeeSagas(), saleSagas()]);
+  yield all([userSagas(), productSagas(), employeeSagas(), saleSagas(), cartSagas()]);
 }

@@ -3,10 +3,8 @@ import { makeStyles } from "@material-ui/core"
 export const useStyles = makeStyles((theme) => ({
   fade: {
     overflow: 'hidden', 
-    marginTop: '80px', 
     borderTop: '8px solid #3F51B5', 
     borderRadius: '3px', 
-    marginLeft: '20px'
   },
     paper: {
         width: '98%',

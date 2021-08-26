@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02343791-235f-4421-90e4-f067e3a8ddf8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/Sale.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/eng/software/tp/TPEngSoftware/domain/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="02343791-235f-4421-90e4-f067e3a8ddf8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +37,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/back-end" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -84,7 +78,7 @@
       <workItem from="1629574099485" duration="708000" />
       <workItem from="1629670720148" duration="984000" />
       <workItem from="1629837778112" duration="1481000" />
-      <workItem from="1629855365517" duration="263000" />
+      <workItem from="1629855365517" duration="793000" />
     </task>
     <servers />
   </component>

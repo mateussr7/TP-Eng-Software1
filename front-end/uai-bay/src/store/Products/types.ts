@@ -1,6 +1,5 @@
 export interface ProductState{
     products: Product[]
-    productInView: Product | null
 }
 
 export interface Product {

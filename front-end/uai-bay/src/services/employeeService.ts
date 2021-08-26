@@ -3,9 +3,17 @@ import { Employee } from '../store/Employee/types'
 import { getWebServiceURL } from './utils/getURL'
 
 export async function fetchEmployeesService(): Promise<Employee[]>{
-    const URL = getWebServiceURL('/employee')
-    const response: Employee[] = await axios.get(URL)
-    return response
+    const URL = getWebServiceURL('/employee/list')
+    const response = await axios.post(URL)
+    return response.data.map((el: Employee) => ({
+        ...el,
+        id: el.id,
+        name: el.name,
+        telephone: el.telephone,
+        email: el.email,
+        salary: el.salary,
+        exclude: el.exclude
+    }))
 }
 
 export async function addEmployeeService(employee: Employee): Promise<Employee>{

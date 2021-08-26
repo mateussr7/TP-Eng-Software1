@@ -1,5 +1,5 @@
 import { action } from "typesafe-actions";
-import { Product, ProductActions, ProductDTO } from "./types";
+import { Product, ProductActions } from "./types";
 
 export const fetchProducts = () => action(ProductActions.FETCH_PRODUCTS, {});
 

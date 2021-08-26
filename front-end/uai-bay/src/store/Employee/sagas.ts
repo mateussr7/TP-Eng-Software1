@@ -6,10 +6,10 @@ import { Employee, EmployeeActions } from "./types";
 
 
 export function* employeeSagas(){
-    takeLatest(EmployeeActions.FETCH_EMPLOYEE, fetchEmployeesSagas)
-    takeLatest(EmployeeActions.ADD_EMPLOYEE, addEmployeeSagas)
-    takeLatest(EmployeeActions.DELETE_EMPLOYEE, deleteEmployeeSagas)
-    takeLatest(EmployeeActions.UPDATE_EMPLOYEE, updateEmployeeSagas)
+    yield takeLatest(EmployeeActions.FETCH_EMPLOYEE, fetchEmployeesSagas)
+    yield takeLatest(EmployeeActions.ADD_EMPLOYEE, addEmployeeSagas)
+    yield takeLatest(EmployeeActions.DELETE_EMPLOYEE, deleteEmployeeSagas)
+    yield takeLatest(EmployeeActions.UPDATE_EMPLOYEE, updateEmployeeSagas)
 }
 
 export function* fetchEmployeesSagas(){

@@ -14,6 +14,7 @@ export function* productSagas(){
 export function* fetchProductsSagas(){
     try{
         const products: Product[] = yield call(() => fetchProductsService())
+        console.log(products)
         yield put(fetchProductsSuccess(products))
     }catch(err){}
 }

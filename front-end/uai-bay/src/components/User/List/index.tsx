@@ -13,6 +13,7 @@ import { useStyles } from "./styles";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { useDispatch } from "react-redux";
+import { fetchAllUsers } from "../../../store/User/actions";
 
 interface UserListProps {
   users: User[];
@@ -25,12 +26,16 @@ const UserList: FC<UserListProps> = ({ users }: UserListProps) => {
   const [listedUsers, setListedUsers] = useState<User[]>([])
 
   useEffect(() => {
+    dispatch(fetchAllUsers())
+  }, [dispatch])
+
+  useEffect(() => {
     setListedUsers(users)
   }, [users])
 
 
   function deleteUser(id: number){
-      setListedUsers(listedUsers.filter((el) => el.id != id))
+      setListedUsers(listedUsers.filter((el) => el.id !== id))
   }
 
   return (
@@ -47,7 +52,7 @@ const UserList: FC<UserListProps> = ({ users }: UserListProps) => {
               </Typography>
             </div>
             <div className={classes.trashDiv}>
-              <IconButton onClick={(event) => deleteUser(el.id)}>
+              <IconButton onClick={(event) => deleteUser(el.id as number)}>
                 <DeleteIcon />
               </IconButton>
             </div>

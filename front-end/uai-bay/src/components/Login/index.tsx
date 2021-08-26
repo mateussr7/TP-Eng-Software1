@@ -1,6 +1,5 @@
 import {
   Button,
-  Container,
   Fade,
   Grid,
   IconButton,
@@ -16,12 +15,19 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 
 import { useStyles } from "./styles";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../store/User/actions";
 
 export const Login: FC = () => {
+  const dispatch = useDispatch()
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   const [passVisibility, setPassVisibility] = useState<boolean>(true);
   const classes = useStyles();
+
+  function handleLoginClickButton(){
+    dispatch(login({email: email, password: password}))
+  }
 
   function handleEmailChange(value: string) {
     setEmail(value);
@@ -97,6 +103,7 @@ export const Login: FC = () => {
               color="primary"
               variant="outlined"
               className={classes.button}
+              onClick={handleLoginClickButton}
             >
               Login
             </Button>

@@ -1,7 +1,7 @@
-import { all, call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import { loginService, fetchUsersList } from "../../services/userServices";
 import { AnyAction } from "redux";
-import { login, loginSuccess, fetchUsersSuccess } from "./actions";
+import { loginSuccess, fetchUsersSuccess } from "./actions";
 import { User, UserActions, UserDTO } from "./types";
 
 export function* userSagas() {
@@ -11,10 +11,14 @@ export function* userSagas() {
 
 function* loginSagas(action: AnyAction) {
   try {
-    const user: UserDTO = action.payload.userDTO;
+    const user: UserDTO = action.payload.user;
+    console.log(user)
     const loggedUser: User = yield call(() => loginService(user));
+    console.log(loggedUser)
     yield put(loginSuccess(loggedUser));
-  } catch (err) {}
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 function* fetchAllUsersSagas(action: AnyAction) {
