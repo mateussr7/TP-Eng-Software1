@@ -27,7 +27,7 @@ export const useStyles = makeStyles((theme) => ({
         height: '60%',
         width: '40%',
         marginTop: '100px',
-        borderLeft: '5px solid #3F51B5'
+        
     },
     loginLabel: {
         fontFamily: 'Helvetica',

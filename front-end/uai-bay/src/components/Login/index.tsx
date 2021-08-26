@@ -101,7 +101,7 @@ export const Login: FC = () => {
             />
             <Button
               color="primary"
-              variant="outlined"
+              variant="contained"
               className={classes.button}
               onClick={handleLoginClickButton}
             >

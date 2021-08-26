@@ -20,12 +20,14 @@ import { Product } from "../../store/Products/types";
 import { getLoggedUser } from "../../store/User/selectors";
 import { User } from "../../store/User/types";
 import { addSale } from "../../store/Sales/actions";
+import { useHistory } from "react-router-dom";
 
 export const CartComponent: FC = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const productsInCart: Product[] = useSelector(getProductsInCart);
   const user: User = useSelector(getLoggedUser) as User
+  const history = useHistory()
 
   function handleDeleteIconClick(idProduct: number) {
     dispatch(removeItemSagas(idProduct));
@@ -33,6 +35,7 @@ export const CartComponent: FC = () => {
 
   function handleAddNewSale(){
     dispatch(addSale({customer: user}, productsInCart))
+    history.push("/")
   }
 
   const [salePrice, setSalePrice] = useState(0);
