@@ -26,5 +26,4 @@ public class User {
     @Version
     private Integer version;
 
-
 }
